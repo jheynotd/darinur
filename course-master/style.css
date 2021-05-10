@@ -1,0 +1,361 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-size: 1em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+body *{
+    max-width: 100%;
+}
+ul {
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.clear{
+    clear: both;
+}
+
+img{
+    max-width: 99%;
+}
+
+.center{
+    margin: auto;
+    text-align: center;
+}
+
+.container {
+    padding: 0 120px;
+}
+
+/*Nav (And Footer partially) */
+.fixed{
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+nav, footer {
+    background-color: #e8e8e8;;
+}
+
+.logo img{
+    cursor: pointer;
+    padding: 24px;
+}
+.fixed .container,.footer .container {
+    display: flex;
+    justify-content: space-between;
+}
+.fixed .kiri{
+    display: flex;
+}
+
+.fixed ul, .footer ul{
+    display: flex;
+    justify-content: space-between ;
+    justify-self: center;
+}
+.fixed .kiri li ,.footer ul li{
+    align-self: center;
+}
+.fixed .kiri li a{
+    display: inline-block;
+    color: #646464;
+    font-size: 1.2em;
+    text-align: center;
+    padding: 34px 30px;
+}
+
+li a:hover {
+    background-color: #646464;
+    color: #e8e8e8 !important;
+}
+.fixed .kanan  {
+    display: flex;
+    align-self: center;
+}
+
+.fixed .kanan >*{
+    padding: 10px 6px;
+}
+.fixed input{
+    border: 1px solid #646464;
+    border-width: 1px 0 1px 1px;
+}
+.fixed .search{
+    font-size: 16px;
+    border: 1px solid #646464;
+    cursor: pointer;
+}
+/* End of Nav (And Footer partially) */
+
+/* Header */
+header {
+background-color: #eeeeee;
+}
+.jumbotron .container {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+ 
+}
+
+.jumbotron .container > * {
+    max-width: 50%;
+    padding: 20px 10px;
+    text-align: justify;
+}
+
+.jumbotron .img-banner , .keterangan {
+    padding: 80px 30px;
+    
+}
+
+.jumbotron .header >* {
+    max-width: 60%;
+    padding: 10px;
+    
+}
+
+.more {
+    display: inline-block;
+    padding: 10px 20px;
+    color:#646464;
+    background-color: orange;
+    box-shadow: 5px 3px 5px 0 rgb(199, 198, 198);
+    border-radius: 6px;
+}
+
+.more:hover {
+    background-color: rgb(240, 156, 0);
+}
+
+/* Main */
+.brand, .team {
+    padding: 60px 0;
+}
+
+.brand h2{
+    padding: 30px 0;
+}
+.brand-item {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    justify-content: space-around;
+}
+
+.cards {
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-around;
+}
+ .card{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    max-width: 20%;
+    margin-top: 2%;
+    padding: 10px 1%;
+    cursor: pointer;
+}
+.team .card>img{
+    padding-bottom: 10px;
+}
+.card:hover {
+    box-shadow:  0 4px 8px 0 rgba(0,0,0,0.6);
+}
+
+.card-container {
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+}
+.card-container p.center {
+    padding-bottom: 3px;
+}
+.card-container >*{
+    margin: 0;
+}
+
+.card-container ul{
+    display: flex;
+    justify-content: center;
+}
+.card-container ul a{
+    padding: 5px 10px;
+    color: #646464;
+}
+
+#tekonolog .card {
+    max-width: 15%;
+}
+
+
+/* Footer */
+
+footer.footer{
+    width: 100% !important;
+    margin-top: 10px;
+    padding-top: 5px;
+}
+
+.footer h3{
+    padding-top: 12px;
+    font-size: 1.2em;
+}
+
+.footer li a i{
+    font-size: 26px;
+}
+
+.footer .kiri li a{
+    display: inline-block;
+    color: #646464;
+    font-size: 1.2em;
+    text-align: center;
+    padding: 20px 26px;
+}
+.footer .kanan ul li {
+    padding: 40px 0;
+}
+
+.footer .kanan ul li a {
+    padding: 40px 26px;
+    color: #666666;
+    font-size: 1.4em;
+}
+
+
+@media only screen and (max-width: 600px) {   
+    .container {
+        padding: 0 10px !important;
+       
+    }
+    .fixed .container,.fixed .kiri ,.footer .container {
+        display: inherit;
+    }
+    .logo img{
+        padding: 5px 0;
+    }
+
+    .fixed ul {
+        justify-content: space-between;
+        justify-self: center;
+    }
+    .fixed .kiri li a {
+       padding: 10px;
+    }
+    .fixed .kiri ul{
+       border-top: 1px #bbbb solid;
+     }
+     
+    .fixed .kanan{
+        position: absolute;
+        top: 8px;
+        right: 12px;
+    }
+
+    .fixed .kanan>*{
+        padding: 5px;
+    }
+
+    /* Header / Jumbotron */
+    header {
+        margin-top: 80px;
+    }
+
+    .jumbotron .img-banner, .keterangan {
+        padding: 10px;
+    }
+ 
+    /* main */
+
+    .cards{
+        flex-direction: column;
+        align-items: center;
+    }
+    .card {
+        max-width: 80%;
+        padding: 5%;
+    }
+
+    .card-container >*{
+        font-size: 0.9em;
+        padding: 4px 0;
+    }
+
+    /* Footer */
+    .footer h3 {
+        display: none;
+    }
+
+    .footer .kiri li a {
+        padding: 10px 20px;
+    }
+
+    .footer .kanan ul {
+        border-top: 1px solid #ddd;
+    }
+    .footer .kanan ul li{
+        display: initial ;
+        width: 100%;
+        list-style: none;
+        padding: 10px 0;
+    }
+    .footer .kanan ul li a{
+        padding: 10px 30px;
+    }
+}
+
+
+@media only screen and (min-width:601px) and (max-width: 768px) {
+    .container {
+        padding: 0 20px;
+        
+    }
+
+    .fixed .kiri li{
+        padding: 0;
+    }
+    .fixed .kiri li a {
+        padding: 20px;
+     }
+     .logo img{
+        padding: 12px;
+    }
+}
+
+@media only screen and  (min-width:769px) and (max-width: 1030px) {
+    .container {
+        padding: 0 30px;
+    }
+    .fixed .kiri li a {
+        padding: 24px 10px;
+     }
+     .fixed .kiri {
+         max-width: 60%;
+     }
+     .logo img{
+        padding: 14px;
+    }
+
+    .cards {
+        flex-wrap: wrap;
+    }
+    .card {
+        max-width: 48%;
+        padding: 1%;
+    }
+
+}
